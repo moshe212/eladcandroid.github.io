@@ -5,6 +5,7 @@ function useFetch(url, callback) {
     })
     .then(function (data) {
       callback(data);
+      console.log(data);
     });
 }
 
