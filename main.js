@@ -1,22 +1,9 @@
-function useFetch(url, callback) {
-  fetch(url)
-    .then(function (res) {
-      return res.json();
-    })
-    .then(function (data) {
-      callback(data);
-      console.log(data);
-    });
-}
-
-function callbackFunc(dataInFunc) {
-  const input = document.querySelector("input");
-  var value = input.value;
-  const resultDiv = document.querySelector(".result");
-  resultDiv.innerHTML = value * dataInFunc.rates.ILS;
-}
-
-var button = document.querySelector("button");
-button.onclick = function () {
-  useFetch("https://api.exchangeratesapi.io/latest", callbackFunc);
-};
+axios
+  .get("https://api.thecatapi.com/v1/images/search")
+  .then(function (res) {
+    var imeg = document.querySelector("img");
+    imeg.src = res.data[0].url;
+  })
+  .catch(function (error) {
+    console.log(error);
+  });

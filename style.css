@@ -1,8 +1,12 @@
-.label {
-  font-size: 20px;
-  color: darkmagenta;
+.Cat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10%;
+  margin-bottom: 10%;
 }
 
-input.invalid {
-  background-color: red;
+img {
+  width: 500px;
+  height: 500px;
 }
